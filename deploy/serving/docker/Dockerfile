@@ -3,6 +3,9 @@ FROM debian:buster-20221219
 LABEL maintainer="Monolith"
 
 ARG PYPI_SOURCE=https://pypi.tuna.tsinghua.edu.cn/simple
+ARG http_proxy="http://sys-proxy-rd-relay.byted.org:8118"
+ARG https_proxy="http://sys-proxy-rd-relay.byted.org:8118"
+ARG no_proxy="byted.org"
 
 # pre install for tsinghua apt source
 RUN set -eux; \
